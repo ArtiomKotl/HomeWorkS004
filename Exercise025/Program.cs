@@ -4,13 +4,13 @@
 // 2, 4 -> 16
 
 
-Console.WriteLine("Возводим число А в степень числа B");
-Console.WriteLine("Введите целое число A");
+Console.WriteLine("Возводим число А в натуральную степень числа B");
+Console.Write("Введите целое число A: ");
 if (!int.TryParse(Console.ReadLine(), out int A))
 {
   Console.WriteLine("Введено нецелое число");
 }
-Console.WriteLine("Введите целое число B");
+Console.Write("Введите целое число B: ");
 if (!int.TryParse(Console.ReadLine(), out int B) || B < 1)
 {
   Console.WriteLine("Введено неверное число");
@@ -22,7 +22,7 @@ int Exponential(int A, int B)
   for (int i = 1; i <= B; i++)
   {
     step = step * A;
-  }
+      }
   return step;
 }
 int result = Exponential(A, B);
